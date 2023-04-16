@@ -1,0 +1,203 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+    font-family: 'Inter', sans-serif;
+	line-height: 1;
+	font-size:16px;
+}
+input[type="submit"]{
+	-webkit-appearance: none;
+}
+img{
+    border:none;
+}
+
+a{
+    text-decoration:none;
+}
+.clr{
+	clear:both;
+}
+/*formulario*/
+.btn-outline{
+    width: 100%;
+    height: 67px;
+    border: 1px solid #0A3871;
+    border-radius: 24px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: #0A3871;
+    background: transparent;
+    box-sizing: border-box;
+}
+.btn-fill{
+    width: 100%;
+    height: 67px;
+    border: 1px solid #0A3871;
+    border-radius: 24px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    background: #0A3871;
+    color: white;
+    box-sizing: border-box;
+}
+textarea {
+    -webkit-appearance: none;
+    background: transparent;
+    border: none;
+    width: 100%;
+    height: 80%;
+    font-size: 14px;
+    padding: 32px;
+    box-sizing: border-box;
+}
+textarea:hover, textarea:visited, textarea:focus-visible, textarea:active, textarea::after {
+    border: none;
+    outline: none;
+}
+.app-content {
+    background-color: #E5E5E5;
+    padding: 40px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    width: 100%;
+    justify-content: space-between;
+}
+.form {
+    /* flex-grow: 2; */
+    height: 100%;
+    width: 100%;
+    padding: 32px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+    justify-content: space-between;
+}
+.form textarea{
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 150%;
+    color: #0A3871;
+}
+.form-footer img{
+    width: 12px;
+}
+.form-footer p{
+    margin-bottom: 16px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 150%;
+    color: #495057;
+    opacity: 0.8;
+}
+.content-actions{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    column-gap: 24px;
+}
+.result{
+    /* flex-grow: 1; */
+    height: 100%;
+    width: 400px;
+    background: #FFFFFF;
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+    border-radius: 32px;
+}
+.result .default{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 32px;
+    box-sizing: border-box;
+    text-align: center;
+    row-gap: 16px;
+    height: 100%;
+}
+.result .default h3{
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 120%;
+    text-align: center;
+    color: #343A40;
+    
+}
+.result .default p{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    text-align: center;
+    color: #495057;
+}
+.result-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    row-gap: 32px;
+    padding: 32px;
+    box-sizing: border-box;
+    height: 100%;
+}
+.result-content textarea{
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 150%;
+    color: #495057;
+}
+.hidden {
+    display: none !important;
+}
+/*Responsivo*/
+@media (max-width: 768px) {
+	body {
+		/* font-size:14px; */
+	}
+    .app-content {
+        flex-direction: column;
+    }
+    .form {
+        height: 100%;
+        min-height: 80vh;
+        width: 100%;
+    }
+    .result {
+        height: 100%;
+        min-height: 20vh;
+        height: auto;
+        width: 100%;
+    }
+
+}
+@media (max-width: 375px) {
+	
+}
