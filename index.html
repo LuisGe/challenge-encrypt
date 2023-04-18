@@ -9,32 +9,50 @@
 </head>
 <body>
     <noscript>Necesitas habilitar JavaScript para que esta aplicación funcione.</noscript>
-    <section class="app-content">
-        <div class="form">
-            <textarea name="" id="" ></textarea>
-            <div class="form-footer">
-                <p>
-                    <img src="./assets/img/info.icon.svg" alt="">
-                    <span>Solo letras minúsculas y sin acentos</span>
-                </p>
-                <div class="content-actions">
-                    <button class="btn-fill">Encriptar</button>
-                    <button class="btn-outline">Desencriptar</button>
+    <div class="app-content">
+        <section class="body-content">
+            <div class="form">
+                <textarea id="input-text" placeholder="Ingrese el texto aqui"></textarea>
+                <div class="form-footer">
+                    <p>
+                        <img src="./assets/img/info.icon.svg" alt="">
+                        <span>Solo letras minúsculas y sin acentos</span>
+                    </p>
+                    <div class="content-actions">
+                        <button id="btn-encrypt" class="btn-fill">Encriptar</button>
+                        <button id="btn-decrypt" class="btn-outline">Desencriptar</button>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="result">
-            <div class="default hidden" >
-                <img src="./assets/img/muñeco.png" alt="">
-                <h3>Ningún mensaje fue encontrado</h3>
-                <p>Ingresa el texto que desees encriptar o desencriptar.</p>
+            <div class="result">
+                <div id="section-default" class="default" >
+                    <img src="./assets/img/muñeco.png" alt="">
+                    <h3>Ningún mensaje fue encontrado</h3>
+                    <p>Ingresa el texto que desees encriptar o desencriptar.</p>
+                </div>
+                <div id="section-result" class="result-content">
+                    <textarea name="" id="output-text" readonly></textarea>
+                    <button id="btn-copy" class="btn-outline">Copiar</button>
+                </div>
+            </div>            
+        </section>
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <p><b>Developed © 2023</b>. Jorge Luis Gerónimo Patzi - v1.0</p>
+                    </div>
+                    <div class="col-md-6">
+                        <p>
+                            <a href="#"><img src="./assets/img/mail.icon.svg" alt=""></a>
+                            <a href="#"><img src="./assets/img/linkedin.icon.svg" alt=""></a>
+                            <a href="#"><img src="./assets/img/github.icon.svg" alt=""></a>
+                        </p>
+                    </div>
+                </div>
             </div>
-            <div class="result-content">
-                <textarea name="" id="" readonly></textarea>
-                <button class="btn-outline">Copiar</button>
-            </div>
-        </div>
-    </section>
+        </footer>
+    </div>
     <script src="./assets/main.js"></script>
 </body>
 </html>

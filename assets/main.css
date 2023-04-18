@@ -81,15 +81,20 @@ textarea:hover, textarea:visited, textarea:focus-visible, textarea:active, texta
     border: none;
     outline: none;
 }
-.app-content {
+.body-content {
     background-color: #E5E5E5;
     padding: 40px;
     box-sizing: border-box;
     display: flex;
-    flex-direction: row;
-    height: 100vh;
+    flex-direction: row;    
     width: 100%;
+    height: inherit;
     justify-content: space-between;
+}
+.app-content {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
 }
 .form {
     /* flex-grow: 2; */
@@ -138,7 +143,7 @@ textarea:hover, textarea:visited, textarea:focus-visible, textarea:active, texta
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 32px;
+    padding: 0 32px;
     box-sizing: border-box;
     text-align: center;
     row-gap: 16px;
@@ -167,6 +172,8 @@ textarea:hover, textarea:visited, textarea:focus-visible, textarea:active, texta
     padding: 32px;
     box-sizing: border-box;
     height: 100%;
+    width: 100%;
+    min-width: max-content;
 }
 .result-content textarea{
     font-weight: 400;
@@ -177,13 +184,66 @@ textarea:hover, textarea:visited, textarea:focus-visible, textarea:active, texta
 .hidden {
     display: none !important;
 }
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 8px 0;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+footer p {
+    margin: 0;
+    line-height: 1.5;
+    text-align: center;
+    width: 100%;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+
+.row {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.col-md-6 {
+    max-width: 50%;
+    width: 50%;
+    padding-right: 15px;
+    padding-left: 15px;
+    justify-items: center;
+    box-sizing: border-box;
+}
 /*Responsivo*/
 @media (max-width: 768px) {
 	body {
 		/* font-size:14px; */
 	}
-    .app-content {
+    .body-content {
         flex-direction: column;
+        height: max-content;
+        padding: 20px;
+    }
+    .result .default {
+        padding: 16px;
+        height: auto;
+        min-height: auto;
+    }
+    .result .default img{
+        display: none;
     }
     .form {
         height: 100%;
@@ -191,13 +251,21 @@ textarea:hover, textarea:visited, textarea:focus-visible, textarea:active, texta
         width: 100%;
     }
     .result {
-        height: 100%;
-        min-height: 20vh;
+        min-height: auto;
         height: auto;
         width: 100%;
     }
-
+    .col-md-6{
+        max-width: 100%;
+        width: 100%;
+    }
 }
 @media (max-width: 375px) {
-	
+    .body-content, .form {
+        padding: 16px;
+    }
+	.content-actions{
+        flex-direction: column;
+        row-gap: 4px;
+    }
 }
